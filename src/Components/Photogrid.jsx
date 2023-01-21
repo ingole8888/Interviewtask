@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, Grid, Image, Select, Text } from "@chakra-ui/react";
+import { Box, Grid, Image } from "@chakra-ui/react";
 import { useState } from 'react'
 import axios from "axios"
 import { useEffect } from 'react';
@@ -16,7 +16,7 @@ const getPhoto=()=>{
 };
 
 useEffect(()=>getPhoto(), [])
-//console.log(photo)
+//console.log(photo.length)
 
   return (
     
@@ -32,7 +32,11 @@ useEffect(()=>getPhoto(), [])
           lg:"repeat(3, 1fr)",
         }
       }
-      gap="32px"
+      gap={{
+        base:"5px",
+        md:"5px",
+        lg:"32px"
+      }}
     display={"grid"}
     >
       {/* for display data in grid format */}
@@ -42,7 +46,7 @@ useEffect(()=>getPhoto(), [])
             <Box key={item.id}
           margin={"auto"}
             >
-              <Image src={item.url}></Image>
+              <Image src={item.url}/>
             </Box>
           );
         })}
