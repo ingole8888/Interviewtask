@@ -17,7 +17,9 @@ const UserProfile = () => {
   useEffect(()=>getuserData(), [])
   console.log(userData)
   return (
-    <div>UserProfile</div>
+    <div>
+      <h1>{userData.name}</h1>
+    </div>
   )
 }
 

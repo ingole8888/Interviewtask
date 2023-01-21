@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box, Button, Flex, Grid, Image, Select, Text } from "@chakra-ui/react";
 import { useState } from 'react'
 import axios from "axios"
 import { useEffect } from 'react';
@@ -18,7 +19,34 @@ useEffect(()=>getPhoto(), [])
 //console.log(photo)
 
   return (
-    <div>Photogrid</div>
+    
+    <Grid
+    margin={"auto"}
+    marginTop={"10px"}
+    width="95%"
+    templateColumns={
+        {
+
+          base:"repeat(3, 1fr)",
+          md:"repeat(3, 1fr)",
+          lg:"repeat(3, 1fr)",
+        }
+      }
+      gap="32px"
+    display={"grid"}
+    >
+      {/* for display data in grid format */}
+      {photo?.length > 0 &&
+        photo?.map((item) => {
+          return (
+            <Box key={item.id}
+          margin={"auto"}
+            >
+              <Image src={item.url}></Image>
+            </Box>
+          );
+        })}
+    </Grid>
   )
 }
 
