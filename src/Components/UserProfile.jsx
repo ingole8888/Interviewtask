@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Image, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Link, Text, Grid } from "@chakra-ui/react";
 import {useState} from "react"
 import axios from "axios"
 import { useEffect } from 'react';
@@ -20,6 +20,7 @@ const UserProfile = () => {
   useEffect(()=>getuserData(), [])
   console.log(userData)
   return (
+    
     <Box 
     margin={"auto"}
     marginTop={"5%"}
@@ -27,6 +28,7 @@ const UserProfile = () => {
     display={"flex"}
     width={"95%"}
     >
+      
       <Box width={"35%"}
       >
         <Image 
@@ -40,20 +42,20 @@ const UserProfile = () => {
 
       </Box>
       <Box >
-           <Box display={"flex"} gap={"30px"}>
-               <Box display={"flex"} gap={"30px"} marginTop={"5px"}><Text fontSize={"25px"} marginTop={"-5px"} >{userData.username}</   Text><MdVerified  fontSize={"25px"} color={"#0095F6"}/>
+           <Grid display={"flex"} gap={"2vw"}>
+               <Box display={"flex"} gap={"2vw"} marginTop={"5px"}><Text fontSize={"2vw"} marginTop={"-5px"} >{userData.username}</   Text><MdVerified  fontSize={"2vw"} color={"#0095F6"}/>
                </Box>
                <Box display={"flex"} gap={"10px"}>
                  <Button backgroundColor={"#0095F6"} 
-                  paddingLeft={"30px"}
-                  paddingRight={"30px"}
+                  paddingLeft={"2vw"}
+                  paddingRight={"2vw"}
                    color={"white"} _hover={{
                    background:"#0095F6"
                    }}
                   >Follow</Button>
                  <Button
-                   paddingLeft={"20px"}
-                   paddingRight={"20px"}
+                   paddingLeft={"1.5vw"}
+                   paddingRight={"1.5vw"}
                    _hover={{
                     background:"#EFEFEF"
                    }}
@@ -62,29 +64,29 @@ const UserProfile = () => {
            
                    _hover={{
                    background:"#EFEFEF"
-                   }}><MdOutlinePersonAdd fontSize={"25px"}/></Button>
+                   }}><MdOutlinePersonAdd fontSize={"2vw"}/></Button>
                 </Box>
                   <Button backgroundColor={"#FAFAFA"} 
                    _hover={{
                   background:"#FAFAFA"
                    }}
-                    ><BsThreeDots fontSize={"40px"}/></Button>
-           </Box>
+                    ><BsThreeDots fontSize={"3vw"}/></Button>
+           </Grid>
            {/* start here */}
             <Box display={"flex"} gap={"10%"} marginTop={"8%"} marginBottom={"7%"}> 
-                  <Box display={"flex"} gap={"3%"}><Text fontSize={"25px"}>5000 </Text><Text  color='#262626' fontSize={"25px"} fontWeight={"light"} >posts</Text></Box>
+                  <Box display={"flex"} gap={"3%"}><Text fontSize={"2vw"}>5000 </Text><Text  color='#262626' fontSize={"2vw"} fontWeight={"light"} >posts</Text></Box>
                   <Button display={"flex"} gap={"3%"} backgroundColor={"#FAFAFA"}  _hover={{
                     backgroundColor:"#FAFAFA"
-                  }}><Text fontSize={"25px"}>232M </Text><Text  color='#262626' fontSize={"25px"} fontWeight={"light"} marginTop={"3%"}>followers</Text></Button>
+                  }}><Text fontSize={"2vw"}>232M </Text><Text  color='#262626' fontSize={"2vw"} fontWeight={"light"} marginTop={"3%"}>followers</Text></Button>
                   <Button display={"flex"} gap={"3%"} backgroundColor={"#FAFAFA"}  _hover={{
-                    backgroundColor:"#FAFAFA"}}><Text fontSize={"25px"}>262 </Text><Text color='#262626' fontSize={"25px"} fontWeight={"light"} marginTop={"3%"}>following</Text></Button>
+                    backgroundColor:"#FAFAFA"}}><Text fontSize={"2vw"}>262 </Text><Text color='#262626' fontSize={"2vw"} fontWeight={"light"} marginTop={"3%"}>following</Text></Button>
             </Box>
             <Box alignContent={"flex-start"} marginBottom={"5%"}>
-            <Text fontSize={"20px"} color='#262626'>{userData.name}</Text>
+            <Text fontSize={"1.5vw"} color='#262626'>{userData.name}</Text>
             <Text color='#262626'>{userData.email}</Text>
-            <Link color={"#385898"} fontSize={"20px"} >{userData.website}</Link>
+            <Link color={"#385898"} fontSize={"1.5vw"} >{userData.website}</Link>
             </Box>
-            <Link fontSize={"20px"} display={"flex"} ><Text color={"gray"} fontSize={"20px"}>Followed by </Text> simran_vedpathak, khushibaraili, _kadam_nilkanth <Text color={"gray"} fontSize={"20px"}>+ 180 more</Text></Link>
+            <Link fontSize={"1.5vw"} display={"flex"} ><Text color={"gray"} fontSize={"1.5vw"}>Followed by </Text> simran_vedpathak, khushibaraili, _kadam_nilkanth <Text color={"gray"} fontSize={"1.5vw"}>+ 180 more</Text></Link>
       </Box>
       
     </Box>
