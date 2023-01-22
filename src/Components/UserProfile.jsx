@@ -73,7 +73,7 @@ const UserProfile = () => {
                     ><BsThreeDots fontSize={"3vw"}/></Button>
            </Grid>
            {/* start here */}
-            <Box display={"flex"} gap={"10%"} marginTop={"8%"} marginBottom={"7%"}> 
+            <Box display={"flex"} gap={"5%"} marginTop={"8%"} marginBottom={"7%"}> 
                   <Box display={"flex"} gap={"3%"}><Text fontSize={"2vw"}>5000 </Text><Text  color='#262626' fontSize={"2vw"} fontWeight={"light"} >posts</Text></Box>
                   <Button display={"flex"} gap={"3%"} backgroundColor={"#FAFAFA"}  _hover={{
                     backgroundColor:"#FAFAFA"

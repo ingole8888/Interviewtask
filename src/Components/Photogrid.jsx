@@ -9,13 +9,16 @@ import {GrMultimedia} from "react-icons/gr"
 
 const Photogrid = () => {
   const [photo, setPhoto]=useState([]);
-
 const getPhoto=()=>{
-  axios.get(`http://jsonplaceholder.typicode.com/photos`)
+  try {
+    axios.get(`https://jsonplaceholder.typicode.com/photos`)
   .then((response)=>{
     const myData=response.data;
     setPhoto(myData);
   });
+  } catch (error) {
+    console.log(error)
+  }
 };
 
 useEffect(()=>getPhoto(), [])
